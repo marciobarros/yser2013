@@ -3,8 +3,7 @@ package br.unirio.yser;
 import java.io.IOException;
 
 import br.unirio.yser.dblp.CarregadorPublicacoesNacional;
-import br.unirio.yser.dblp.GeradorListaVeiculos;
-import br.unirio.yser.dblp.GeradorPublicacaoConjunta;
+import br.unirio.yser.dblp.GeradorMineracaoSequencial;
 import br.unirio.yser.model.ListaPesquisadores;
 
 @SuppressWarnings("unused")
@@ -26,12 +25,12 @@ public class ProgramaPrincipal
 		new CarregadorPublicacoesNacional(diretorioBase).executa(pesquisadores);
 
 		//new GeradorListaVeiculos().executa(pesquisadores.pegaPesquisadoresPublicacoesIndicacoes(2));
-		new GeradorPublicacaoConjunta().executa(pesquisadores.pegaPesquisadoresPublicacoesIndicacoes(2));
+		//new GeradorPublicacaoConjunta().executa(pesquisadores.pegaPesquisadoresPublicacoesIndicacoes(2));
+		new GeradorMineracaoSequencial().executa(pesquisadores.pegaPesquisadoresPublicacoesIndicacoes(2));
 
 //		System.out.println(pesquisadores.size() + " pesquisadores");
 //		System.out.println(pesquisadores.pegaPesquisadoresIndicados().size() + " pesquisadores com indicacoes");
 //		System.out.println(pesquisadores.pegaPesquisadoresIndicacoesMinimas(2).size() + " pesquisadores com pelo menos 2 indicacoes");
-//
 //		System.out.println(pesquisadores.pegaPesquisadoresPublicacoes().size() + " pesquisadores com publicações");
 //		System.out.println(pesquisadores.pegaPesquisadoresPublicacoesIndicacoes(2).size() + " pesquisadores com publicações e pelo menos 2 indicacoes");
 	}
