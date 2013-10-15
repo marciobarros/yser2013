@@ -16,7 +16,7 @@ import br.unirio.yser.model.ListaPesquisadores;
 import br.unirio.yser.model.Pesquisador;
 import br.unirio.yser.model.Publicacao;
 
-public class CarregadorPublicacoes
+public class CarregadorPublicacoesInternacional
 {
 	private String[] CONVERSAO_VEICULOS =
 	{
@@ -32,7 +32,7 @@ public class CarregadorPublicacoes
 	
 	private String diretorioRaiz;
 	
-	public CarregadorPublicacoes(String diretorio)
+	public CarregadorPublicacoesInternacional(String diretorio)
 	{
 		this.diretorioRaiz = diretorio;
 	}
